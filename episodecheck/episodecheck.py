@@ -19,8 +19,12 @@ class Finder(object):
         full_set = set(xrange(1, max(eps)))
         self.Missing = sorted(full_set - eps)
 
-if __name__ == "__main__":    
+def main():
     finder = Finder(os.listdir(sys.argv[1]));
     missing = finder.Missing
     
     print missing;
+
+if __name__ == "__main__":
+    main();    
+    
